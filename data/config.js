@@ -3,7 +3,7 @@ dotenv.config()
 
 const PORT = process.env.PORT || 7000
 
-const DB_NAME = process.env.DB_NAME
+const DB_NAME = process.env.DB_NAME || 'database'
 
 const DB_USER = process.env.DB_USER 
 const DB_PASS = process.env.DB_PASS 
