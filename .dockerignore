@@ -1,0 +1,7 @@
+**/.git
+**/.gitignore
+**/*.ren
+**/node_modules
+*/*.sqlite
+Dockerfile
+.dockerignore
