@@ -7,7 +7,6 @@
 * Docker and docker compose
 
 ## Getting started
----
 ```bash
 $ git clone https://github.com/webshining/expressjs.template project_name
 $ cd project_name
