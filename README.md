@@ -14,7 +14,7 @@ $ cp .env.ren .env
 $ npm install
 $ npm start
 ```
-## Environment variables config
+### Environment variables config
 `PORT` - The port on which the server will run
 
 `DB_NAME` - Database name(default: database)
