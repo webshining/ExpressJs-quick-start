@@ -1,18 +1,10 @@
 name: Electron Actions
-on: 
-  pull_request:
+on:
   push:
-    branches:
-      master
+    branches: [ master ]
+
 jobs:
-  lint:
+  deploy:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x]
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix-node }}
-      - run: npm ci
+    - name: Pull from github and build 
