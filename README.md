@@ -17,3 +17,13 @@ $ npm start
 ```
 ## Environment variables config
 `PORT` - The port on which the server will run
+
+`DB_NAME` - Database name(default: database)
+
+`DB_USER` - Database username(required for PostgreSQL)
+
+`DB_PASS` - Database password(required for PostgreSQL)
+
+`DB_HOST` - Database host(required for PostgreSQL)
+
+`DB_PORT` - Database port(required for PostgreSQL)
