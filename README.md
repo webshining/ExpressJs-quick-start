@@ -1,10 +1,10 @@
 # <p align="center">Express JS Template</p>
 ## Technologies used:
-* ### Express JS
-* ### Sequelize
-* ### PostgreSQL
-* ### SQLite
-* ### Docker and docker compose
+* Express JS
+* Sequelize
+* PostgreSQL
+* SQLite
+* Docker and docker compose
 
 ## Getting started
 ---
