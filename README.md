@@ -1,5 +1,5 @@
 # <p align="center">Express JS Template</p>
-## Technologies used:
+### Technologies used:
 * Express JS
 * Sequelize
 * PostgreSQL
