@@ -24,6 +24,16 @@ $ npm start
 ```bash
 $ docker-compose up -d
 ```
+### Logs
+```bash
+$ docker-compose logs -f app
+$ docker-compose logs -f db
+```
+### Manage database container
+>You can change default database, username and password in `docker-compose.yml`
+```bash
+$ docker-compose exec db bash
+```
 ### Custom network name
 >Сreate a network (`network_name: changeable`(your custom networn name))
 ```bash
