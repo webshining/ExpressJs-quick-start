@@ -9,6 +9,8 @@
 * [Getting started](#getting-started)
 * [Docker](#docker)
     * [Сontainer lifting](#container-lifting)
+    * [Сontainer lifting](#logs)
+    * [Manage database container](#manage-database-container)
     * [Custom network name](#custom-network-name)
 * [Environment variables config](#environment-variables-config)
 ## Getting started
