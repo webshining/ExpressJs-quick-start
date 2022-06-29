@@ -31,7 +31,7 @@ networks:
         name: network_name
         external: true
 ```
-### Environment variables config
+## Environment variables config
 `PORT` - The port on which the server will run
 
 `DB_NAME` - Database name(default: database)
