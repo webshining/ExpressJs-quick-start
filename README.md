@@ -8,7 +8,7 @@
 ## Navigate
 * [Getting started](#getting-started)
 * [Docker](#docker)
-    * [Сontainer lifting](#container-lifting)
+    * [Сontainer lifting](#сontainer-lifting)
     * [Logs](#logs)
     * [Manage database container](#manage-database-container)
     * [Custom network name](#custom-network-name)
