@@ -20,7 +20,7 @@ $ npm start
 $ docker-compose up -d
 ```
 ### Custom network name
->Сreate a network (network_name: changeable(your custom networn name))
+>Сreate a network (`network_name: changeable`(your custom networn name))
 ```bash
 $ docker network create network_name
 ```
