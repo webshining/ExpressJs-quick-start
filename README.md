@@ -15,7 +15,7 @@ $ npm install
 $ npm start
 ```
 ## Docker
-### Build
+### Сontainer lifting
 ```bash
 $ docker-compose up -d
 ```
