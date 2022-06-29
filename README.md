@@ -6,11 +6,11 @@
 * SQLite
 * Docker and docker compose
 ## Navigate
-* [Getting started](#getting_started)
+* [Getting started](#getting-started)
 * [Docker](#docker)
-    * [Сontainer lifting](#container_lifting)
-    * [Custom network name](#custom_network_name)
-* [Environment variables config](#environment_variables_config)
+    * [Сontainer lifting](#container-lifting)
+    * [Custom network name](#custom-network-name)
+* [Environment variables config](#environment-variables-config)
 ## Getting started
 ```bash
 $ git clone https://github.com/webshining/expressjs.template project_name
