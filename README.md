@@ -14,6 +14,24 @@ $ cp .env.ren .env
 $ npm install
 $ npm start
 ```
+## Docker
+### Build
+```bash
+$ docker-compose up -d
+```
+### Custom network name
+>If you want to use a custom network name, create a network
+
+`docker network create network_name`
+
+>And paste 
+```
+networks:
+    default:
+        name: web_host
+        external: true
+```
+>at the end of the docker-compose.yml file, and replace network_name with your own name. 
 ### Environment variables config
 `PORT` - The port on which the server will run
 
