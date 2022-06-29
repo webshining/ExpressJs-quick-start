@@ -20,20 +20,17 @@ $ npm start
 $ docker-compose up -d
 ```
 ### Custom network name
->If you want to use a custom network name, create a network
-
+>Сreate a network (network_name: changeable(your custom networn name))
 ```bash
 $ docker network create network_name
 ```
-
->And paste 
+>Paste at the end of the docker-compose.yml file
 ```
 networks:
     default:
-        name: web_host
+        name: network_name
         external: true
 ```
->at the end of the docker-compose.yml file, and replace network_name with your own name. 
 ### Environment variables config
 `PORT` - The port on which the server will run
 
