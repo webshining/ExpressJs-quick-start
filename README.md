@@ -22,7 +22,9 @@ $ docker-compose up -d
 ### Custom network name
 >If you want to use a custom network name, create a network
 
-`docker network create network_name`
+```bash
+$ docker network create network_name
+```
 
 >And paste 
 ```
