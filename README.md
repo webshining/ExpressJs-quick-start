@@ -32,9 +32,11 @@ $ docker-compose logs -f app
 $ docker-compose logs -f db
 ```
 ### Manage database container
->You can change default database, username and password in `docker-compose.yml`
+>You can change default database(default - postgres), username(default - postgres) and password(default - postgres) in `docker-compose.yml`
 ```bash
 $ docker-compose exec db bash
+# in container
+$ psql -U postgres
 ```
 ### Custom network name
 >Сreate a network (`network_name: changeable`(your custom networn name))
