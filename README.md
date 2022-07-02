@@ -7,6 +7,9 @@
 * Docker and docker compose
 ## Navigate
 * [Getting started](#getting-started)
+    * [Start typescript app](#start-typescript-app)
+    * [Build app](#build-app)
+    * [Start javascript app](#start-javascript-app)
 * [Docker](#docker)
     * [Сontainer lifting](#сontainer-lifting)
     * [Logs](#logs)
@@ -14,15 +17,25 @@
     * [Custom network name](#custom-network-name)
 * [Environment variables config](#environment-variables-config)
 ## Getting started
+### Start typescript/dev app
 ```bash
 $ git clone https://github.com/webshining/expressjs.template project_name
 $ cd project_name
 $ cp .env.ren .env
 $ npm install
-$ npm start
+$ npm run start:dev
+```
+### Build app
+```bash
+$ npm run build
+```
+### Start javascript app
+```bash
+$ npm run start
 ```
 ## Docker
 ### Сontainer lifting
+> Build required (`npm run build`)
 ```bash
 $ docker-compose up -d
 ```
