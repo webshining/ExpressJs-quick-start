@@ -1,8 +1,8 @@
 import express from 'express'
-import sequelize from './db.js'
-import { PORT } from './data/config.js'
-import * as models from './models/relationships.js'
-import router from './routes/index.js'
+import sequelize from './db'
+import { PORT } from './data/config'
+import * as models from './models/relationships'
+import router from './routes/index'
 
 const app = express()
 app.use(express.json())
