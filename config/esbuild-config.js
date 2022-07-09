@@ -10,5 +10,6 @@ ESBuild.build({
     entryNames: 'bundle',
     external: ['./node_modules/*'],
     format: BUILD_FORMAT,
+    sourcemap: true,
     minify: true
 })
