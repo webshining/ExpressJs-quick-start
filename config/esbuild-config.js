@@ -4,10 +4,11 @@ import {BUILD_FORMAT} from './config.js'
 
 ESBuild.build({
     platform: 'node',
-    outdir: path.resolve('./dist'),
-    entryPoints: [path.resolve('./index.js')],
-    entryNames: 'bundle',
     bundle: true,
+    entryPoints: [path.resolve('./index.js')],
+    outdir: path.resolve('./dist'),
+    entryNames: 'bundle',
     external: ['./node_modules/*'],
-    format: BUILD_FORMAT
+    format: BUILD_FORMAT,
+    minify: true
 })
