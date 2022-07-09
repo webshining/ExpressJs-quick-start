@@ -10,7 +10,7 @@ const DB_PASS = process.env.DB_PASS
 const DB_PORT = process.env.DB_PORT 
 const DB_HOST = process.env.DB_HOST 
 
-const LOGGING = process.env.LOGGING || false
+const LOGGING = Boolean(process.env.LOGGING) || false
 
 const BUILD_FORMAT = process.env.BUILD_FORMAT || 'esm'
 
