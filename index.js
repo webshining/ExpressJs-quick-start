@@ -1,6 +1,6 @@
 import express from 'express'
 import sequelize from './db.js'
-import { PORT } from './data/config.js'
+import { PORT } from './config/config.js'
 import * as models from './models/relationships.js'
 import router from './routes/index.js'
 
