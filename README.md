@@ -2,11 +2,15 @@
 ### Technologies used:
 * Express JS
 * Sequelize
+* ESBuild
 * PostgreSQL
 * SQLite
 * Docker and docker compose
 ## Navigate
 * [Getting started](#getting-started)
+    * [Init project](#init-project)
+    * [Build app](#build-app)
+    * [Run builded app](#run-builded-app)
 * [Docker](#docker)
     * [Сontainer lifting](#сontainer-lifting)
     * [Logs](#logs)
@@ -14,14 +18,24 @@
     * [Custom network name](#custom-network-name)
 * [Environment variables config](#environment-variables-config)
 ## Getting started
+## Init project
 ```bash
 $ git clone https://github.com/webshining/expressjs.template project_name
 $ cd project_name
 $ cp .env.ren .env
 $ npm install
-$ npm start
+$ npm run start:dev
+```
+## Build app
+```bash
+$ npm run build
+```
+## Run builded app
+```bash
+$ npm run start:prod
 ```
 ## Docker
+>In the initial configuration, docker runs the dev version of the project, to run the prod version, replace CMD ["npm", "run start:dev"] with CMD ["npm", "run start:prod"]
 ### Сontainer lifting
 ```bash
 $ docker-compose up -d
