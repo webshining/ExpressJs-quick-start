@@ -8,7 +8,7 @@
 * Docker and docker compose
 ## Navigate
 * [Getting started](#getting-started)
-    * [Start typescript app](#start-typescript-app)
+    * [Start typescript/dev app](#start-typescriptdev-app)
     * [Build app](#build-app)
     * [Start javascript app](#start-javascript-app)
 * [Docker](#docker)
