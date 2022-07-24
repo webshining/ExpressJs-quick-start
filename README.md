@@ -53,7 +53,7 @@ $ docker-compose exec db bash
 $ psql -U postgres
 ```
 ### Custom network name
->Сreate a network (`network_name: changeable`(your custom networn name))
+>Сreate a network (`network_name: changeable`(your custom network name))
 ```bash
 $ docker network create network_name
 ```
