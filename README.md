@@ -2,7 +2,7 @@
 ### Technologies used:
 * TypeScript
 * Express JS
-* Sequelize
+* TypeORM
 * PostgreSQL
 * SQLite
 * Docker and docker compose
@@ -42,8 +42,8 @@ $ docker-compose up -d
 ```
 ### Logs
 ```bash
-$ docker-compose logs -f app
-$ docker-compose logs -f db
+$ docker-compose logs app
+$ docker-compose logs db
 ```
 ### Manage database container
 >You can change default database(default - postgres), username(default - postgres) and password(default - postgres) in `docker-compose.yml`
@@ -76,3 +76,5 @@ networks:
 `DB_HOST` - Database host(required for PostgreSQL)
 
 `DB_PORT` - Database port(required for PostgreSQL)
+
+`LOGGING` - Enable/Disable database logging 

@@ -1,27 +1,38 @@
-import {FindOptionsWhere, FindManyOptions} from "typeorm";
-import {User} from "../models/user.entity";
-import DBConnect from '../db'
+import * as bcrypt from "bcrypt";
+import { Request, Response } from "express";
+import { CreateUserDto } from "../dto/user.dto";
+import UserService from "../services/user.service";
 
 class UserController {
-    private userRepository = DBConnect.getRepository(User)
+	private userService = new UserService();
 
-    async all(options?: FindManyOptions<User>): Promise<User[]> {
-        return this.userRepository.find(options)
-    }
+	one = async (req: Request, res: Response) => {
+		const user = await this.userService.getOne(req.params);
+		return user ? res.status(200).json({ user }) : res.json({ message: "User not found!" });
+	};
 
-    async one(options: FindOptionsWhere<User> | FindOptionsWhere<User>[]): Promise<User | null> {
-        return this.userRepository.findOneBy(options)
-    }
+	many = async (req: Request, res: Response) => {
+		const users = await this.userService.getMany();
+		return res.status(200).json({ users });
+	};
 
-    async save(data: User): Promise<User> {
-        const user = this.userRepository.create(data)
-        return this.userRepository.save(user)
-    }
+	register = async (req: Request<{}, {}, CreateUserDto>, res: Response) => {
+		const { username, email, password } = req.body;
+		const candidate = await this.userService.getOne([{ username }, { email }]);
+		if (candidate) return res.json({ message: "User with this username or email is already exists!" });
+		const hashPass = await bcrypt.hash(password, 7);
+		const user = await this.userService.create({ username, email, password: hashPass });
+		return res.status(200).json({ user });
+	};
 
-    async remove(options: FindOptionsWhere<User> | FindOptionsWhere<User>[]) {
-        const user = await this.one(options)
-        return user && this.userRepository.remove(user)
-    }
+	login = async (req: Request<{}, {}, { email: string; password: string }>, res: Response) => {
+		const { email, password } = req.body;
+		const user = await this.userService.getOne([{ email }, { username: email }]);
+		if (!user) return res.json({ message: "User not found!" });
+		const comparePass = await bcrypt.compare(password, user.password);
+		if (!comparePass) return res.json({ message: "Passworn is incorrect!" });
+		return res.status(200).json({ user });
+	};
 }
 
-export default new UserController()
+export default new UserController();
