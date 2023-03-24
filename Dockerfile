@@ -19,8 +19,8 @@ COPY package.json .
 
 RUN npm install
 
-COPY --from=build /app/dist .
+COPY --from=build /app/dist ./dist
 
 COPY .env .env
 
-CMD ["node", "index.js"]
+CMD ["node", "dist/bundle.js"]
