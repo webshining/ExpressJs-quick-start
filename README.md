@@ -1,7 +1,7 @@
 # <p align="center">Express JS Template</p>
 ### Technologies used:
 * Express JS
-* Sequelize
+* TypeORM
 * ESBuild
 * PostgreSQL
 * SQLite
@@ -32,7 +32,7 @@ $ npm run build
 ```
 ## Run builded app
 ```bash
-$ npm run start:prod
+$ npm run start
 ```
 ## Docker
 >In the initial configuration, docker runs the dev version of the project, to run the prod version, replace CMD ["npm", "run start:dev"] with CMD ["npm", "run start:prod"]
@@ -76,3 +76,5 @@ networks:
 `DB_HOST` - Database host(required for PostgreSQL)
 
 `DB_PORT` - Database port(required for PostgreSQL)
+
+`LOGGING` - Enable/Disable database logging
