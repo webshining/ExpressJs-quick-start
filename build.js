@@ -1,13 +1,13 @@
-import { build } from 'esbuild'
+const { build } = require('esbuild')
+const { dependencies, devDependencies } = require('./package.json')
 
 build({
-    bundle: true,
     entryPoints: ['./src/index.js'],
-    outdir: 'dist',
-    external: ['./node_modules/*'],
-    platform: 'node',
-    entryNames: 'bundle',
-    format: 'esm',
+    bundle: true,
+    minify: true,
+    outfile: "dist/bundle.js",
     sourcemap: true,
-    minify: true
+    platform: "node",
+    format: "cjs",
+    external: Object.keys(dependencies).concat(Object.keys(devDependencies)),
 })
